@@ -93,3 +93,4 @@ Kimai is based on modern technologies and frameworks such as [PHP](https://www.p
 [Bootstrap](https://github.com/twbs/bootstrap) and [Tabler](https://tabler.io/),
 and [countless](composer.json) [others](package.json).
 
+# kimai-techlogia
