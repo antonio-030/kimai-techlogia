@@ -1,0 +1,78 @@
+/*!*************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[4].oneOf[1].use[1]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[4].oneOf[1].use[2]!./assets/sass/_export-pdf.scss ***!
+  \*************************************************************************************************************************************************************************************************/
+/*
+ * This file is part of the Kimai time-tracking app.
+ *
+ * For the full copyright and license information, please view the LICENSE
+ * file that was distributed with this source code.
+ */
+body {
+  font-family: sans-serif;
+  font-size: 10pt;
+  margin: 0;
+  padding: 0;
+}
+
+p {
+  margin: 0;
+}
+
+table.items {
+  border: 0.1mm solid #000000;
+  width: 100%;
+  font-size: 9pt;
+  border-collapse: collapse;
+}
+
+td, th {
+  padding: 7px;
+}
+
+td {
+  vertical-align: top;
+}
+
+.items td {
+  border-left: 0.1mm solid #000000;
+  border-right: 0.1mm solid #000000;
+}
+
+.items tr.even {
+  background-color: #f5f5f5;
+}
+
+.items tr.summary {
+  background-color: #efefef;
+}
+
+.items tr.summary td {
+  font-weight: bold;
+  border-top: 0.1mm solid #000000;
+  border-bottom: 0.1mm solid #000000;
+}
+
+table thead th {
+  background-color: #ececec;
+  border: 0.1mm solid #000000;
+  font-weight: bold;
+  font-size: 10pt;
+  text-align: left;
+}
+
+.items td.totals {
+  font-weight: bold;
+  border: 0.1mm solid #000000;
+}
+
+.items .center,
+.items td.duration,
+.items td.cost {
+  text-align: center;
+}
+
+.text-nowrap {
+  white-space: nowrap;
+}
+
+/*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiZXhwb3J0LXBkZi5jc3MiLCJtYXBwaW5ncyI6Ijs7O0FBQUE7Ozs7O0VBQUE7QUFPQTtFQUNJO0VBQ0E7RUFDQTtFQUNBO0FBQUo7O0FBRUE7RUFDSTtBQUNKOztBQUNBO0VBQ0k7RUFDQTtFQUNBO0VBQ0E7QUFFSjs7QUFBQTtFQUNJO0FBR0o7O0FBREE7RUFDSTtBQUlKOztBQUZBO0VBQ0k7RUFDQTtBQUtKOztBQUhBO0VBQ0k7QUFNSjs7QUFKQTtFQUNJO0FBT0o7O0FBTEE7RUFDSTtFQUNBO0VBQ0E7QUFRSjs7QUFOQTtFQUNJO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7QUFTSjs7QUFQQTtFQUNJO0VBQ0E7QUFVSjs7QUFSQTs7O0VBR0k7QUFXSjs7QUFUQTtFQUNJO0FBWUosQyIsInNvdXJjZXMiOlsid2VicGFjazovL2tpbWFpMi8uL2Fzc2V0cy9zYXNzL19leHBvcnQtcGRmLnNjc3MiXSwic291cmNlc0NvbnRlbnQiOlsiLypcclxuICogVGhpcyBmaWxlIGlzIHBhcnQgb2YgdGhlIEtpbWFpIHRpbWUtdHJhY2tpbmcgYXBwLlxyXG4gKlxyXG4gKiBGb3IgdGhlIGZ1bGwgY29weXJpZ2h0IGFuZCBsaWNlbnNlIGluZm9ybWF0aW9uLCBwbGVhc2UgdmlldyB0aGUgTElDRU5TRVxyXG4gKiBmaWxlIHRoYXQgd2FzIGRpc3RyaWJ1dGVkIHdpdGggdGhpcyBzb3VyY2UgY29kZS5cclxuICovXHJcblxyXG5ib2R5IHtcclxuICAgIGZvbnQtZmFtaWx5OiBzYW5zLXNlcmlmO1xyXG4gICAgZm9udC1zaXplOiAxMHB0O1xyXG4gICAgbWFyZ2luOiAwO1xyXG4gICAgcGFkZGluZzogMDtcclxufVxyXG5wIHtcclxuICAgIG1hcmdpbjogMDtcclxufVxyXG50YWJsZS5pdGVtcyB7XHJcbiAgICBib3JkZXI6IDAuMW1tIHNvbGlkICMwMDAwMDA7XHJcbiAgICB3aWR0aDogMTAwJTtcclxuICAgIGZvbnQtc2l6ZTogOXB0O1xyXG4gICAgYm9yZGVyLWNvbGxhcHNlOiBjb2xsYXBzZTtcclxufVxyXG50ZCwgdGgge1xyXG4gICAgcGFkZGluZzogN3B4O1xyXG59XHJcbnRkIHtcclxuICAgIHZlcnRpY2FsLWFsaWduOiB0b3A7XHJcbn1cclxuLml0ZW1zIHRkIHtcclxuICAgIGJvcmRlci1sZWZ0OiAwLjFtbSBzb2xpZCAjMDAwMDAwO1xyXG4gICAgYm9yZGVyLXJpZ2h0OiAwLjFtbSBzb2xpZCAjMDAwMDAwO1xyXG59XHJcbi5pdGVtcyB0ci5ldmVuIHtcclxuICAgIGJhY2tncm91bmQtY29sb3I6ICNmNWY1ZjU7XHJcbn1cclxuLml0ZW1zIHRyLnN1bW1hcnkge1xyXG4gICAgYmFja2dyb3VuZC1jb2xvcjogI2VmZWZlZjtcclxufVxyXG4uaXRlbXMgdHIuc3VtbWFyeSB0ZCB7XHJcbiAgICBmb250LXdlaWdodDogYm9sZDtcclxuICAgIGJvcmRlci10b3A6IDAuMW1tIHNvbGlkICMwMDAwMDA7XHJcbiAgICBib3JkZXItYm90dG9tOiAwLjFtbSBzb2xpZCAjMDAwMDAwO1xyXG59XHJcbnRhYmxlIHRoZWFkIHRoIHtcclxuICAgIGJhY2tncm91bmQtY29sb3I6ICNlY2VjZWM7XHJcbiAgICBib3JkZXI6IDAuMW1tIHNvbGlkICMwMDAwMDA7XHJcbiAgICBmb250LXdlaWdodDogYm9sZDtcclxuICAgIGZvbnQtc2l6ZTogMTBwdDtcclxuICAgIHRleHQtYWxpZ246IGxlZnQ7XHJcbn1cclxuLml0ZW1zIHRkLnRvdGFscyB7XHJcbiAgICBmb250LXdlaWdodDogYm9sZDtcclxuICAgIGJvcmRlcjogMC4xbW0gc29saWQgIzAwMDAwMDtcclxufVxyXG4uaXRlbXMgLmNlbnRlcixcclxuLml0ZW1zIHRkLmR1cmF0aW9uLFxyXG4uaXRlbXMgdGQuY29zdCB7XHJcbiAgICB0ZXh0LWFsaWduOiBjZW50ZXI7XHJcbn1cclxuLnRleHQtbm93cmFwIHtcclxuICAgIHdoaXRlLXNwYWNlOiBub3dyYXA7XHJcbn1cclxuIl0sIm5hbWVzIjpbXSwic291cmNlUm9vdCI6IiJ9*/

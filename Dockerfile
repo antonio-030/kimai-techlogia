@@ -70,6 +70,9 @@ COPY .docker/service.sh /service.sh
 COPY .docker/self-test.sh /self-test.sh
 COPY .docker/dbtest.php /dbtest.php
 
+# Ensure startup.sh is executable
+RUN chmod +x /startup.sh
+
 ENV DATABASE_URL="mysql://kimai:kimai@127.0.0.1:3306/kimai?charset=utf8mb4&serverVersion=5.7.40"
 ENV APP_SECRET=change_this_to_something_unique
 # The default container name for nginx is nginx
@@ -94,47 +97,25 @@ ENV GROUP_ID=
 
 VOLUME [ "/opt/kimai/var" ]
 
-CMD [ "/startup.sh" ]
+CMD ["/bin/bash", "-c", "/startup.sh"]
+
 
 
 ###########################
 # final builds
 ###########################
 
-# developement build
-FROM base AS dev
-# copy kimai develop source
-COPY --from=git-dev --chown=www-data:www-data /opt/kimai /opt/kimai
-COPY .docker /assets
-# do the composer deps installation
-RUN echo \$PATH
-RUN \
-    export COMPOSER_HOME=/composer && \
-    composer --no-ansi install --working-dir=/opt/kimai --optimize-autoloader && \
-    composer --no-ansi clearcache && \
-    composer --no-ansi require --working-dir=/opt/kimai laminas/laminas-ldap && \
-    cp /usr/local/etc/php/php.ini-development /usr/local/etc/php/php.ini && \
-    chown -R www-data:www-data /opt/kimai /usr/local/etc/php/php.ini && \
-    mkdir -p /opt/kimai/var/logs && chmod 777 /opt/kimai/var/logs && \
-    sed "s/128M/-1/g" /usr/local/etc/php/php.ini-development > /opt/kimai/php-cli.ini && \
-    sed -i "s/env php/env -S php -c \/opt\/kimai\/php-cli.ini/g" /opt/kimai/bin/console && \
-    tar -C /opt/kimai -zcvf /var/tmp/public.tgz public && \
-    /opt/kimai/bin/console kimai:version | awk '{print $2}' > /opt/kimai/version.txt
-ENV APP_ENV=dev
-ENV DATABASE_URL=
-ENV memory_limit=256M
-
 # production build
 FROM base AS prod
 # copy kimai production source
 COPY --from=git-prod --chown=www-data:www-data /opt/kimai /opt/kimai
 COPY .docker /assets
-# do the composer deps installation
-RUN \
-    export COMPOSER_HOME=/composer && \
+# Install Composer dependencies, including Symfony Mailer
+RUN export COMPOSER_HOME=/composer && \
     composer --no-ansi install --working-dir=/opt/kimai --no-dev --optimize-autoloader && \
     composer --no-ansi clearcache && \
     composer --no-ansi require --working-dir=/opt/kimai laminas/laminas-ldap && \
+    composer --no-ansi require --working-dir=/opt/kimai symfony/mailer && \
     cp /usr/local/etc/php/php.ini-production /usr/local/etc/php/php.ini && \
     sed -i "s/expose_php = On/expose_php = Off/g" /usr/local/etc/php/php.ini && \
     sed -i "s/;opcache.enable=1/opcache.enable=1/g" /usr/local/etc/php/php.ini && \
@@ -148,6 +129,8 @@ RUN \
     chown -R www-data:www-data /opt/kimai /usr/local/etc/php/php.ini && \
     tar -C /opt/kimai -zcvf /var/tmp/public.tgz public && \
     /opt/kimai/bin/console kimai:version | awk '{print $2}' > /opt/kimai/version.txt
+
+
 ENV APP_ENV=prod
 ENV DATABASE_URL=
 ENV memory_limit=256M
