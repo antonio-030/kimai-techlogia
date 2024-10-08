@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" version="1.2">
+  <file source-language="en" target-language="de" datatype="plaintext" original="messages.en.xliff">
+    <body>
+      <trans-unit id="8OK6pjj" resname="custom_content.subtitle_stylesheet">
+        <source>custom_content.subtitle_stylesheet</source>
+        <target>Dieses CSS wird bei jedem Seitenaufruf mit eingebunden</target>
+      </trans-unit>
+      <trans-unit id=".MmQq.S" resname="custom_content.subtitle_javascript">
+        <source>custom_content.subtitle_javascript</source>
+        <target>Dieses Javascript wird bei jedem Seitenaufruf ausgeführt</target>
+      </trans-unit>
+      <trans-unit id="hU8_Va5" resname="custom_content.subtitle_alert">
+        <source>custom_content.subtitle_alert</source>
+        <target>Dieser Warnhinweis wird jedem Benutzer auf jeder Seite angezeigt</target>
+      </trans-unit>
+      <trans-unit id="WkpaqUg" resname="custom_content.subtitle_news">
+        <source>custom_content.subtitle_news</source>
+        <target>Diese Meldung erscheint als Inhalt der neuen Seite. Markdown Formatierung wird unterstützt.</target>
+      </trans-unit>
+      <trans-unit id="jmtqTs." resname="custom_content.subtitle_newstitle">
+        <source>custom_content.subtitle_newstitle</source>
+        <target>Dieser Titel ist der Name des Menüeintrags. Wenn der Titel leer ist, wird das Menü nicht angezeigt.</target>
+      </trans-unit>
+      <trans-unit id="phZIiK5" resname="custom_content.add_predefined_rule">
+        <source>custom_content.add_predefined_rule</source>
+        <target>Vorgefertigte Regel einfügen</target>
+      </trans-unit>
+      <trans-unit id="neN.isk" resname="custom_content.add_rule_help">
+        <source>custom_content.add_rule_help</source>
+        <target>Fügen Sie ihre eigenen CSS Regeln hier ein</target>
+      </trans-unit>
+      <trans-unit id="2LccOr4" resname="custom_content.replace">
+        <source>custom_content.replace</source>
+        <target>Die Regel "%name%" ist bereits in Ihrem eigenen CSS enthalten. Soll Sie ersetzt werden? Falls nicht, wird die Regel angehangen.</target>
+      </trans-unit>
+      <trans-unit id="ayt40av" resname="custom_content.tab_alert">
+        <source>Warning</source>
+        <target>Warnhinweis</target>
+      </trans-unit>
+      <trans-unit id="i6B6V7W" resname="custom_content.tab_news">
+        <source>News</source>
+        <target>Neuigkeit</target>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

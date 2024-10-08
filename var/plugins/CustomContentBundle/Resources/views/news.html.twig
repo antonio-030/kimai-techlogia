@@ -1,0 +1,14 @@
+{% extends 'base.html.twig' %}
+
+{% block main %}
+
+    {% embed '@theme/embeds/card.html.twig' with {'id': 'custom-content-news'} %}
+        {% block box_body_class %}markdown{% endblock %}
+        {% block box_body %}
+            {% if content is not empty %}
+                {{ content|md2html }}
+            {% endif %}
+        {% endblock %}
+    {% endembed %}
+
+{% endblock %}

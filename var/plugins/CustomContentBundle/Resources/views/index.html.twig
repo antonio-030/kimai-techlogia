@@ -1,0 +1,44 @@
+{% extends 'base.html.twig' %}
+{% import "macros/widgets.html.twig" as widgets %}
+
+{% block main %}
+
+    {{ form_start(form) }}
+    {{ form_errors(form) }}
+
+    <div class="card">
+        <div class="card-header">
+            <ul class="nav nav-tabs card-header-tabs" data-bs-toggle="tabs">
+                {% set tabs = {'css': 'css_custom_content', 'javascript': 'js_custom_content', 'alert': 'alert_custom_content', 'news': 'news_custom_content'} %}
+                {% for tabId, permission in tabs %}
+                    {% if is_granted(permission) %}
+                        <li class="nav-item"><a href="#tab_{{ tabId }}" data-bs-toggle="tab" aria-expanded="false" class="nav-link{% if tab == tabId %} active{% endif %}">{{ ('custom_content.tab_' ~ tabId)|trans }}</a></li>
+                    {% endif %}
+                {% endfor %}
+            </ul>
+        </div>
+        <div class="card-body">
+            <div class="tab-content">
+                <div class="tab-pane{% if tab == 'css' %} show active{% endif %}" id="tab_css">
+                    {{ form_row(form.stylesheet) }}
+                    <button type="submit" formaction="{{ path('custom_content_css') }}" class="ccBtn btn btn-primary">{{ 'action.save'|trans }}</button>
+                </div>
+                <div class="tab-pane{% if tab == 'javascript' %} show active{% endif %}" id="tab_javascript">
+                    {{ form_row(form.javascript) }}
+                    <button type="submit" formaction="{{ path('custom_content_javascript') }}" class="ccBtn btn btn-primary">{{ 'action.save'|trans }}</button>
+                </div>
+                <div class="tab-pane{% if tab == 'alert' %} show active{% endif %}" id="tab_alert">
+                    {{ form_row(form.alert) }}
+                    <button type="submit" formaction="{{ path('custom_content_alert') }}" class="ccBtn btn btn-primary">{{ 'action.save'|trans }}</button>
+                </div>
+                <div class="tab-pane{% if tab == 'news' %} show active{% endif %}" id="tab_news">
+                    {{ form_row(form.newsTitle) }}
+                    {{ form_row(form.news, {attr: {rows: 15}}) }}
+                    <button type="submit" formaction="{{ path('custom_content_news') }}" class="ccBtn btn btn-primary">{{ 'action.save'|trans }}</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    {{ form_end(form) }}
+
+{% endblock %}

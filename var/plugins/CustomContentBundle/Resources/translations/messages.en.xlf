@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" version="1.2">
+  <file source-language="en" target-language="en" datatype="plaintext" original="none">
+    <body>
+      <trans-unit id="8OK6pjj" resname="custom_content.subtitle_stylesheet">
+        <source>custom_content.subtitle_stylesheet</source>
+        <target>These CSS rules will be included with every page response</target>
+      </trans-unit>
+      <trans-unit id=".MmQq.S" resname="custom_content.subtitle_javascript">
+        <source>custom_content.subtitle_javascript</source>
+        <target>This Javascript will be executed on every page load</target>
+      </trans-unit>
+      <trans-unit id="hU8_Va5" resname="custom_content.subtitle_alert">
+        <source>custom_content.subtitle_alert</source>
+        <target>This warning message will be shown to every user on every page</target>
+      </trans-unit>
+      <trans-unit id="WkpaqUg" resname="custom_content.subtitle_news">
+        <source>custom_content.subtitle_news</source>
+        <target>This message will appear as the content of the new page. Markdown formatting is supported.</target>
+      </trans-unit>
+      <trans-unit id="jmtqTs." resname="custom_content.subtitle_newstitle">
+        <source>custom_content.subtitle_newstitle</source>
+        <target>This title is the name of the menu item. If the title is empty, the menu will not be displayed.</target>
+      </trans-unit>
+      <trans-unit id="phZIiK5" resname="custom_content.add_predefined_rule">
+        <source>custom_content.add_predefined_rule</source>
+        <target>Add pre-defined rule</target>
+      </trans-unit>
+      <trans-unit id="neN.isk" resname="custom_content.add_rule_help">
+        <source>custom_content.add_rule_help</source>
+        <target>Add all of your custom CSS rules here</target>
+      </trans-unit>
+      <trans-unit id="2LccOr4" resname="custom_content.replace">
+        <source>custom_content.replace</source>
+        <target>The rule "%name%" is already included in your custom CSS. Replace it? If not, it will be appended.</target>
+      </trans-unit>
+      <trans-unit id="ytH9MJg" resname="custom_content.tab_css">
+        <source>CSS</source>
+        <target>CSS</target>
+      </trans-unit>
+      <trans-unit id="DTzAdW2" resname="custom_content.tab_javascript">
+        <source>Javascript</source>
+        <target>Javascript</target>
+      </trans-unit>
+      <trans-unit id="ayt40av" resname="custom_content.tab_alert">
+        <source>Warning</source>
+        <target>Warning</target>
+      </trans-unit>
+      <trans-unit id="i6B6V7W" resname="custom_content.tab_news">
+        <source>News</source>
+        <target>News</target>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>
